@@ -1708,3 +1708,44 @@ at point as the default value for occur.
     (easy-menu-define -menu global-map "Murray's Personal Menu" menu)
     (easy-menu-add murrays-menu global-map)))
 #+end_src
+* File associations
+#+begin_src emacs-lisp
+;============================================================
+;; File associations
+;;============================================================
+(setq auto-mode-alist
+      (append '(("\\.C$"     . c++-mode)
+                ("\\.cc$"    . c++-mode)
+                ("\\.cpp$"   . c++-mode)
+                ("\\.cxx$"   . c++-mode)
+                ("\\.hxx$"   . c++-mode)
+                ("\\.h$"     . c++-mode)
+                ("\\.hh$"    . c++-mode)
+                ("\\.idl$"   . c++-mode)
+                ("\\.c$"     . c-mode)
+                ("\\.cg$"    . c-mode)    ; nvidia cg
+                ("\\.pl$"    . perl-mode)
+                ("\\.pm$"    . perl-mode)
+                ("\\.java$"  . java-mode)
+                ("\\.m$"     . octave-mode)
+                ("\\.org$"    . org-mode)
+                ("\\.html$"  . html-mode)
+				("\\.Rhtml$"  . html-mode)
+                ("\\.htm$"   . html-mode)
+                ("\\.xml$"   . sgml-mode)
+                ("\\.R$"     . r-mode)
+                ("\\.r$"     . r-mode)
+                ("\\.log$"   . text-mode)
+                ("\\.sty$"   . latex-mode)
+                ("\\.tex$"   . latex-mode)
+                ("\\.latex$" . latex-mode)
+                ("\\.diff$"  . diff-mode)
+				("\\.rnw$"   . noweb-mode)
+				("\\.Rmd$"   . markdown-mode)
+				("\\.sc$"  . c++-mode)
+		;;("\\.emacs"  . emacs-list-mode)
+                ("\\.patch$" . diff-mode))
+              auto-mode-alist))
+;;============================================================
+#+end_src
+* ESS
