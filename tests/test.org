@@ -1,5 +1,5 @@
 #+STARTUP: hidestars
-#+STARTUP: content
+#+STARTUP: showall
 
 The is an example Org mode file
 ==================================
@@ -9,3 +9,7 @@ This _is_ just a /quick/ **example** of an org-mode file
 * First level header
 
 ** Second level header
+   - TODO This is an important todo item
+*** TODO this is an item [1/2]
+    - [X] check item
+    - [ ] check item 2
