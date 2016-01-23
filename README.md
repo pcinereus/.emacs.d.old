@@ -13,4 +13,5 @@ EMACS CONFIGURATION NOTES
   2. Copy the SSH location
   3. git remote add origin git@github.com:pcinereus/.emacs.d.git
   4. git pull -u origin master
-  5. git push -u origin master
+  5. add and commit
+  6. git push -u origin master
