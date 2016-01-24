@@ -133,19 +133,19 @@ at point as the default value for occur.
 (defun ml-load-files-notes ()
   "Load notes.org"
   (interactive)
-  (find-file "~/Dropbox/org/notes.org")
+  (find-file "~/org/notes.org")
   )
 (global-set-key (kbd "C-c f n") 'ml-load-files-notes)
 (defun ml-load-files-AIMS ()
   "Load AIMS.org"
   (interactive)
-  (find-file "~/Dropbox/org/AIMS.org")
+  (find-file "~/org/AIMS.org")
   )
 (global-set-key (kbd "C-c f a") 'ml-load-files-AIMS)
 (defun ml-load-files-references ()
   "Load references.org"
   (interactive)
-  (find-file "~/Dropbox/org/references.org")
+  (find-file "~/org/references.org")
   )
 (global-set-key (kbd "C-c f r") 'ml-load-files-references)
 (defun ml-load-files-bib ()
@@ -199,7 +199,7 @@ at point as the default value for occur.
 	 (interactive "sChoice (q=quick, p=popup): ")
 	 (pos-tip-show
 	  (with-temp-buffer
-		(insert-file-contents "~/Dropbox/org/notes.org")
+		(insert-file-contents "~/org/notes.org")
 		(if (equal x "q") (progn (search-forward "Quick commands" nil nil 1) (setq p1 (point))))
 		(if (equal x "p") (progn (search-forward "POPUP shortcuts" nil nil 1) (setq p1 (point))))
 		(search-forward "*" nil nil 1) (setq p2 (point))
@@ -1866,16 +1866,16 @@ at point as the default value for occur.
 ;;     (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
      (define-key global-map "\C-cl" 'org-store-link)
      (define-key global-map "\C-ca" 'org-agenda)
-(setq org-agenda-files (list "~/Dropbox/org/work.org"
-							 "~/Dropbox/org/gtd.org"
-							 "~/Dropbox/org/stats.org"
-                             "~/Dropbox/org/AIMS.org"
-                             "~/Dropbox/org/todo.org"
-                             "~/Dropbox/org/book.org"
-                             "~/Dropbox/org/sandpit.org"
-							 "~/Dropbox/org/webdev.org"
-							 "~/Dropbox/org/magneticIsland.org"
-                             "~/Dropbox/org/home.org"))
+(setq org-agenda-files (list "~/org/work.org"
+			     "~/org/gtd.org"
+	                     "~/org/stats.org"
+                             "~//org/AIMS.org"
+                             "~/org/todo.org"
+                             "~/org/book.org"
+                             "~/org/sandpit.org"
+			     "~/org/webdev.org"
+			     "~/org/magneticIsland.org"
+                             "~/org/home.org"))
 ;; The following makes it so that the diary file is included in the agenda mode
 (setq org-agenda-include-diary t)
 
@@ -1922,7 +1922,7 @@ at point as the default value for occur.
 
 (setq org-link-abbrev-alist
       '(("bib" . "~/Dropbox/Work/Resources/References/References.bib::%s")
-	("notes" . "~/Dropbox/org/references.org::#%s")
+	("notes" . "~/org/references.org::#%s")
 	("papers" . "~/Dropbox/Work/Resources/References/Papers/%s.pdf")))
 
 #+end_src
@@ -1940,7 +1940,7 @@ at point as the default value for occur.
 #+begin_src emacs-lisp
 (define-key global-map (kbd "C-c c") 'org-capture)
 (setq org-capture-templates
-      '(("t" "todo" entry (file+headline "~/Dropbox/org/todo.org" "Tasks")
+      '(("t" "todo" entry (file+headline "~/org/todo.org" "Tasks")
          "* TODO [#A] %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")))
 (setq org-default-notes-file (concat org-directory "/gtd.org"))
 
@@ -2455,9 +2455,9 @@ at point as the default value for occur.
 --------------------------------------------------------------------------------
       "
       ("i" (find-file "~/.emacs.d/init.el"))
-	  ("n" (find-file "~/Dropbox/org/notes.org"))
-	  ("a" (find-file "~/Dropbox/org/AIMS.org"))
-	  ("r" (find-file "~/Dropbox/org/references.org"))
+	  ("n" (find-file "~/org/notes.org"))
+	  ("a" (find-file "~/org/AIMS.org"))
+	  ("r" (find-file "~/org/references.org"))
 	  ("b" (find-file "~/Dropbox/Work/Resources/References/References.bib"))
 	  ("w" (dired "~/Work/AIMS/WQ"))
 	  ("l" (dired "~/Work/AIMS/LTM"))
